@@ -469,6 +469,8 @@ document.querySelectorAll('[data-marquee]').forEach((wrap) => {
     qx(e.clientX); qy(e.clientY);
   });
 
+  /* KARBONNA: posicao de enquadramento por foto (rosto sempre visivel) */
+  const FACE_POS = { 'kb-white':'50% 50%', 'kb-palestra':'50% 30%', 'kb-editorial':'50% 15%', 'kb-cream':'50% 26%', 'kb-retrato':'50% 38%', 'kb-hero':'50% 20%', 'kb-studio':'50% 15%', 'kb-quote':'50% 42%' };
   function show(src) {
     if (src && src !== currentSrc) {
       currentSrc = src;
@@ -477,6 +479,8 @@ document.querySelectorAll('[data-marquee]').forEach((wrap) => {
       next.onload = () => img.setAttribute('src', src);
       next.src = src;
       if (next.complete) img.setAttribute('src', src);
+      const key = (src.split('/').pop() || '').replace('.jpg', '');
+      if (FACE_POS[key]) img.style.objectPosition = FACE_POS[key];
     }
     if (!visible) {
       visible = true;
