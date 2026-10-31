@@ -444,7 +444,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* ---------- footer ---------- */
 .footer{background:var(--black);color:var(--white);padding:clamp(80px,12vh,150px) var(--pad) 34px;position:relative;overflow:hidden}
 .footer__bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.footer__bg img{width:100%;height:100%;object-fit:cover;object-position:78% 10%}
+.footer__bg img{width:100%;height:100%;object-fit:cover;object-position:78% 10%;filter:grayscale(1) contrast(1.02)}
 .footer__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 42%,rgba(0,0,0,.38) 72%,rgba(0,0,0,.55) 100%)}
 .footer>*:not(.footer__bg){position:relative;z-index:1}
 .footer__cta{font-size:var(--display-lg);font-weight:600;letter-spacing:-.035em;text-transform:uppercase;line-height:1.05;max-width:18ch}
@@ -532,18 +532,18 @@ a.video-wrap{display:block;text-decoration:none;color:inherit}
   content:"";position:absolute;z-index:0;pointer-events:none;
   left:115%;top:50%;transform:translateY(-50%);
   width:260vmax;height:260vmax;border-radius:50%;
-  background:#04060c;
+  background:#161310;
   box-shadow:
-    0 0 10px 3px rgba(228,242,255,.9),
-    0 0 50px 18px rgba(165,198,255,.5),
-    0 0 190px 75px rgba(47,98,255,.4),
-    0 0 520px 230px rgba(18,52,226,.22);
+    0 0 10px 3px rgba(255,237,189,.75),
+    0 0 50px 18px rgba(255,220,160,.38),
+    0 0 190px 75px rgba(201,162,94,.3),
+    0 0 520px 230px rgba(160,120,60,.14);
 }
 #metodo::after,#ecossistema::after{
   content:"";position:absolute;z-index:0;pointer-events:none;inset:0;
   background:
-    radial-gradient(120% 90% at 100% 85%, rgba(23,58,215,.3), transparent 60%),
-    radial-gradient(95% 70% at 100% 8%, rgba(150,185,255,.16), transparent 55%);
+    radial-gradient(120% 90% at 100% 85%, rgba(201,162,94,.2), transparent 60%),
+    radial-gradient(95% 70% at 100% 8%, rgba(255,237,189,.1), transparent 55%);
 }
 #metodo > *,#ecossistema > *{position:relative;z-index:1}
 
@@ -571,8 +571,17 @@ a.video-wrap{display:block;text-decoration:none;color:inherit}
 /* banda branca: dourado escuro pra contraste */
 .band--white .label__num,
 .band--white .tl__num{color:var(--gold-dark);}
+/* framing dos rostos nas secoes (fotos portrait cover) */
+.gallery__item img{object-position:50% 28%;}
+.row-preview img{object-position:50% 30%;}
 .stat__num{color:var(--gold-dark);}
 .stat__label strong,
 .stat__num sup{color:inherit;}
 
 /* guard: footer word e cursor dependem de blend difference - nao tocar */
+
+/* textos pedidos em branco */
+.hero__eyebrow{color:#fff;}
+.display-xl--mixed em{color:#fff;}
+.quoteband__by{color:#fff;}
+.quoteband__by em{color:#fff;}
