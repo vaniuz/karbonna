@@ -109,7 +109,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero__media{position:absolute;inset:0;overflow:hidden;will-change:transform}
 .hero__rays{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;mix-blend-mode:screen}
 .hero__rays canvas{width:100%;height:100%;display:block}
-.hero__img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;transform:scale(1.12);will-change:transform,clip-path}
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;will-change:transform,clip-path}
 .hero__media::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 30%,transparent 40%,rgba(0,0,0,.42) 100%)}
 .hero__scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.5) 20%,rgba(0,0,0,.06) 46%,rgba(0,0,0,.22) 100%)}
 .hero__content{
@@ -585,3 +585,10 @@ a.video-wrap{display:block;text-decoration:none;color:inherit}
 .display-xl--mixed em{color:#fff;}
 .quoteband__by{color:#fff;}
 .quoteband__by em{color:#fff;}
+
+/* hero wide (foto paisagem): reforco de contraste atras do texto (desktop) */
+@media (min-width:901px){
+  .hero__scrim{background:linear-gradient(to right,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 34%,rgba(0,0,0,0) 58%),linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.42) 22%,rgba(0,0,0,0) 50%);}
+  .hero__eyebrow{text-shadow:0 1px 14px rgba(0,0,0,.65);max-width:36ch;line-height:1.85;}
+  .hero__title{text-shadow:0 2px 28px rgba(0,0,0,.45);}
+}

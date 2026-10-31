@@ -73,7 +73,7 @@ const heroImg = document.querySelector('.hero__img');
 const heroMedia = document.querySelector('.hero__media');
 
 if (heroEl && heroImg && !REDUCED) {
-  gsap.set(heroImg, { scale: 1.18, clipPath: 'inset(7% 5% 7% 5%)' });
+  gsap.set(heroImg, { scale: 1.05, clipPath: 'inset(2.5% 2% 2.5% 2%)' });
   /* Zoom-out fluido no scroll: a imagem RECOLHE (diminui) com scrub amortecido.
      Scale vai no WRAPPER (o intro é dono do scale/clip do IMG) — sem briga de tweens,
      e scrub numérico (1s de catch-up) em vez de `true` para não saltar. */
