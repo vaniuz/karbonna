@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vaniuz.github.io/karbonna/sitemap.xml
